@@ -1,0 +1,14 @@
+{
+  "name": "ve-com-megasoft-pinpad",
+  "version": "1.1.0",
+  "description": "Componente de comunicacion con PINPad Verifone e265, New Pos Technology-n58, Newland N910",
+  "main": "cordova-megasoft-pinpad.js",
+  "cordova": {
+    "id": "ve-com-megasoft-pinpad",
+    "platforms": ["android"]
+  },
+  "repository": {},
+  "keywords": ["ecosystem:cordova", "cordova-android", "PINPad"],
+  "author": "Mega Soft Computacion C.A.",
+  "license": "MIT"
+}

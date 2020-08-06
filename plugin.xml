@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin
+	xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	id="cordova-megasoft-pinpad" 
+	version="1.1.0">
+	
+	<!-- Datos del plugin -->
+	<name>cordova-megasoft-pinpad</name>
+	<description>Plugin de cordova para la comunicacion con dispositivos procesadores de tarjetas financieras</description>
+    <author>Mega Soft Computacion C.A.</author>
+    <keywords>megasoft, pinpad, e265, e355, N58, N910</keywords>
+	
+	<!-- Javascript -->
+	<js-module name="cordova-megasoft-pinpad" src="www/cordova-megasoft-pinpad.js">
+		<clobbers target="pinpad" />
+	</js-module>
+	
+	<!-- android -->
+	<platform name="android">
+	
+		<!-- Feature's -->
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="cordova-megasoft-pinpad">
+				<param name="android-package" value="ve.com.megasoft.pinpad.modelo.ModeloPinpad" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+		
+		<!-- Permisos -->
+		<config-file parent="/*" target="AndroidManifest.xml">
+			<uses-permission android:name="android.permission.BLUETOOTH" />
+    		<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+		    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+		    <uses-permission android:name="android.permission.VIBRATE" />
+			<uses-permission android:name="android.permission.MANAGE_NEWLAND"/>
+			<!--<uses-permission android:name="android.permission.MANAGE_NEWLANDUART"/>-->
+		</config-file>
+
+		<!-- separate config-file here targeting AndroidManifest with parent NOT equal to /* -->
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity
+            	android:name="ve.com.megasoft.pinpad.newland.data.N900KeyBoardNumberActivity">
+        	</activity>
+		</config-file>
+		
+		<!-- Librerias -->
+		<!-- Newland N910 -->
+		<source-file src="libs/android/n910/meSdk-3.7.52-SNAPSHOT.jar" target-dir="libs" />
+
+		<source-file src="libs/android/n910/arm64-v8a/libemvjni.so" target-dir="libs/arm64-v8a" />
+		<source-file src="libs/android/n910/arm64-v8a/libintelligentLib.so" target-dir="libs/arm64-v8a" />
+		<source-file src="libs/android/n910/arm64-v8a/libjniICServer.so" target-dir="libs/arm64-v8a" />
+		<source-file src="libs/android/n910/arm64-v8a/libndkapi.so" target-dir="libs/arm64-v8a" />
+		<source-file src="libs/android/n910/arm64-v8a/libnlprintex.so" target-dir="libs/arm64-v8a" />
+
+		<source-file src="libs/android/n910/armeabi/libemvjni.so" target-dir="libs/armeabi" />
+		<source-file src="libs/android/n910/armeabi/libintelligentLib.so" target-dir="libs/armeabi" />
+		<source-file src="libs/android/n910/armeabi/libjniICServer.so" target-dir="libs/armeabi" />
+		<source-file src="libs/android/n910/armeabi/libndkapi.so" target-dir="libs/armeabi" />
+		<source-file src="libs/android/n910/armeabi/libnlprintex.so" target-dir="libs/armeabi" />
+
+		<source-file src="libs/android/n910/armeabi-v7a/libemvjni.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="libs/android/n910/armeabi-v7a/libintelligentLib.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="libs/android/n910/armeabi-v7a/libjniICServer.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="libs/android/n910/armeabi-v7a/libndkapi.so" target-dir="libs/armeabi-v7a" />
+		<source-file src="libs/android/n910/armeabi-v7a/libnlprintex.so" target-dir="libs/armeabi-v7a" />
+
+		<!--<source-file src="libs/android/n910/assets/aid_capk.app" target-dir="libs/assets" />
+		<source-file src="libs/android/n910/assets/BmpFonts.DZK" target-dir="libs/assets" />-->
+
+		<!-- New POS Technology N58 -->
+		<source-file src="libs/android/n58/pos_blue2.jar" target-dir="libs" />
+		
+		<!-- Generales -->
+		<source-file src="libs/android/general/TlvBuilder.jar" target-dir="libs" />
+		
+		<!-- RESOURCES -->
+		<!-- drawable -->
+		<source-file src="src/android/res/drawable-hdpi/corner_rect_blank.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/divider.png"           target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_launcher.png"       target-dir="res/drawable-hdpi" />
+		
+		<!-- layout -->
+		<source-file src="src/android/res/layout/bonded_devices.xml"		target-dir="res/layout" />
+		<source-file src="src/android/res/layout/list_item.xml"				target-dir="res/layout" />
+		<source-file src="src/android/res/layout/input_pin_fragment.xml"	target-dir="res/layout" />
+
+		<!-- raw -->
+		<source-file src="src/android/res/raw/click1.wav"	target-dir="res/raw" />
+		
+		<!-- values -->
+		<source-file src="src/android/res/values/styles.xml"     target-dir="res/values" />
+		<source-file src="src/android/res/values-es/strings.xml" target-dir="res/values-es" />
+		<config-file parent="/*" target="res/values/strings.xml">
+			<!-- Cuadro de dialogo dispositivos bluetooth -->
+			<string name="bluetooth_setting">Setting</string>
+			<string name="paired_POS">Paired POS, Please select</string>
+			<string name="no_paired">No paired，Please Press "Setting" to pair!</string>
+			<string name="cancel">Cancel</string>
+			<string name="pd_pinpad_data">Geting PINPad identification</string>
+			<!-- Mensajes dialogo coneccion y ejecucion -->
+			<string name="connecting">Connecting,waiting... </string>
+    		<string name="requesting">Requesting,waiting... </string>
+    		<!-- Bateria N58 -->
+    		<string name="only_battery_supply">only battery supply</string>
+   			<string name="charging"> is charging</string>
+    		<string name="full_charged">full charged</string>
+    		<string name="only_power_supply">only power supply</string>
+			<!-- Cuadro de dialogo N910-->
+			<string name="texto_lector_banda">Deslice Tarjeta</string>
+    		<string name="texto_lector_chip">Inserte Tarjeta</string>
+
+		</config-file>
+		
+		<!-- JAVA -->
+		<!-- Bean Base -->
+		<source-file src="src/android/pinpad/bean/BeanBase.java" target-dir="src/ve/com/megasoft/pinpad/bean" />
+		
+		<!-- bean -->
+		<source-file src="src/android/pinpad/bean/BeanAidsInfo.java"      target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanBateria.java"       target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanCalibracion.java"   target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanEmvKeyInfo.java"    target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanFecha.java"         target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanPinblock.java"      target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanSerial.java"        target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanTamper.java"        target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanTarjeta.java"       target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanTelephoneData.java" target-dir="src/ve/com/megasoft/pinpad/bean" />
+		<source-file src="src/android/pinpad/bean/BeanImpresora.java"	  target-dir="src/ve/com/megasoft/pinpad/bean" />
+
+		<!-- Connection -->
+			<!-- Interfaz -->
+		<source-file src="src/android/pinpad/connection/WirelessConector.java"                           target-dir="src/ve/com/megasoft/pinpad/connection" />
+			<!-- Configuracion -->
+		<source-file src="src/android/pinpad/connection/configuracion/Configuracion.java"                target-dir="src/ve/com/megasoft/pinpad/connection/configuracion" />
+			<!-- Bluetooth -->
+				<!-- Adapter -->
+		<source-file src="src/android/pinpad/connection/bluetooth/adapter/BondedDeviceAdapter.java"      target-dir="src/ve/com/megasoft/pinpad/connection/bluetooth/adapter" />
+				<!-- Bean -->
+		<source-file src="src/android/pinpad/connection/bluetooth/bean/BeanBluetoothDevice.java"         target-dir="src/ve/com/megasoft/pinpad/connection/bluetooth/bean" />
+				<!-- Conector -->
+		<source-file src="src/android/pinpad/connection/bluetooth/conector/BluetoothConector.java"       target-dir="src/ve/com/megasoft/pinpad/connection/bluetooth/conector" />		
+		<source-file src="src/android/pinpad/connection/bluetooth/conector/BluetoothServerConector.java" target-dir="src/ve/com/megasoft/pinpad/connection/bluetooth/conector" />
+		<source-file src="src/android/pinpad/connection/bluetooth/conector/ImprovedBluetoothDevice.java" target-dir="src/ve/com/megasoft/pinpad/connection/bluetooth/conector" />
+				<!-- Thread -->
+		<source-file src="src/android/pinpad/connection/bluetooth/thread/ServerConectorThread.java"      target-dir="src/ve/com/megasoft/pinpad/connection/bluetooth/thread" />
+				<!-- User Interface -->
+		<source-file src="src/android/pinpad/connection/bluetooth/ui/UIDeviceDialog.java"                target-dir="src/ve/com/megasoft/pinpad/connection/bluetooth/ui" />
+		
+		<!-- Excepciones -->
+		<source-file src="src/android/pinpad/exception/SerialConnectionException.java" target-dir="src/ve/com/megasoft/pinpad/exception" />
+		
+		<!-- Interfaces -->
+		<source-file src="src/android/pinpad/interfaz/CODIGOS_CONDICION.java" target-dir="src/ve/com/megasoft/pinpad/interfaz" />
+		
+		<!-- Util -->
+		<source-file src="src/android/pinpad/util/ConversorNumerico.java"  target-dir="src/ve/com/megasoft/pinpad/util" />
+		<source-file src="src/android/pinpad/util/MyString.java"           target-dir="src/ve/com/megasoft/pinpad/util" />
+		<source-file src="src/android/pinpad/util/Tarjeta.java"            target-dir="src/ve/com/megasoft/pinpad/util" />
+		<source-file src="src/android/pinpad/util/UtilField55.java"        target-dir="src/ve/com/megasoft/pinpad/util" />
+		<source-file src="src/android/pinpad/util/Utils.java"              target-dir="src/ve/com/megasoft/pinpad/util" />
+		<source-file src="src/android/pinpad/util/WinUtils.java"           target-dir="src/ve/com/megasoft/pinpad/util" />
+		
+		<!-- Modelo Base -->
+		<source-file src="src/android/pinpad/modelo/ModeloBase.java" target-dir="src/ve/com/megasoft/pinpad/modelo" />
+		
+		<!-- modelo pinpad -->
+		<source-file src="src/android/pinpad/modelo/ModeloPinpad.java"     target-dir="src/ve/com/megasoft/pinpad/modelo" />
+		<source-file src="src/android/pinpad/modelo/ModeloPinpadBase.java" target-dir="src/ve/com/megasoft/pinpad/modelo" />
+		
+		<!-- N58 -->
+			<!-- data -->
+		<source-file src="src/android/pinpad/n58/data/AidsCapksData.java"   target-dir="src/ve/com/megasoft/pinpad/n58/data" />
+		<source-file src="src/android/pinpad/n58/data/TransactionData.java" target-dir="src/ve/com/megasoft/pinpad/n58/data" />			
+			<!-- Modelos -->
+		<source-file src="src/android/pinpad/n58/modelo/ModeloN58.java" target-dir="src/ve/com/megasoft/pinpad/n58/modelo" />
+		
+		<!-- Verifone -->
+			<!-- Command -->
+		<source-file src="src/android/pinpad/verifone/command/AidsDownloader.java" 	    target-dir="src/ve/com/megasoft/pinpad/verifone/command" />
+		<source-file src="src/android/pinpad/verifone/command/CapksDownloader.java" 	target-dir="src/ve/com/megasoft/pinpad/verifone/command" />
+		<source-file src="src/android/pinpad/verifone/command/CommandBuilder.java" 		target-dir="src/ve/com/megasoft/pinpad/verifone/command" />
+		<source-file src="src/android/pinpad/verifone/command/EmvExecutor.java"    		target-dir="src/ve/com/megasoft/pinpad/verifone/command" />
+		<source-file src="src/android/pinpad/verifone/command/PinblockExecutor.java"    target-dir="src/ve/com/megasoft/pinpad/verifone/command" />
+			<!-- Modelo -->
+		<source-file src="src/android/pinpad/verifone/modelo/ModeloEWirelessSerie.java" target-dir="src/ve/com/megasoft/pinpad/verifone/modelo" />
+			<!-- thread -->
+		<source-file src="src/android/pinpad/verifone/thread/ReadWriteThread.java" target-dir="src/ve/com/megasoft/pinpad/verifone/thread" />
+		<source-file src="src/android/pinpad/verifone/thread/TimeoutThread.java"   target-dir="src/ve/com/megasoft/pinpad/verifone/thread" />
+	
+		<!-- Newland N910 -->
+			<!-- Handler -->
+		<source-file src="src/android/pinpad/newland/handler/BaseHandler.java"				target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerBateria.java"			target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerCargaAids.java"			target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerCargaCapks.java"		target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerGetFecha.java"			target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerSerial.java"			target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerStartEmv.java"			target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerSegCertEmv.java"		target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerBandaMagnetica.java"	target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerPinblock.java"			target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+		<source-file src="src/android/pinpad/newland/handler/HandlerImpresora.java"			target-dir="src/ve/com/megasoft/pinpad/newland/handler" />
+
+		
+			<!-- Data -->
+		<source-file src="src/android/pinpad/newland/data/AidsCapksData.java"				target-dir="src/ve/com/megasoft/pinpad/newland/data"/>
+		<source-file src="src/android/pinpad/newland/data/NlUtils.java"						target-dir="src/ve/com/megasoft/pinpad/newland/data"/>
+		<source-file src="src/android/pinpad/newland/data/N900PinKeyBoard.java"				target-dir="src/ve/com/megasoft/pinpad/newland/data"/>
+		<source-file src="src/android/pinpad/newland/data/N900KeyBoardNumberActivity.java"	target-dir="src/ve/com/megasoft/pinpad/newland/data"/>
+		<source-file src="src/android/pinpad/newland/data/SimpleTransferListener.java"		target-dir="src/ve/com/megasoft/pinpad/newland/data"/>
+		<source-file src="src/android/pinpad/newland/data/Const.java"						target-dir="src/ve/com/megasoft/pinpad/newland/data"/>
+		<source-file src="src/android/pinpad/newland/data/SoundPoolImpl.java"				target-dir="src/ve/com/megasoft/pinpad/newland/data"/>
+
+			<!-- Modelo -->
+		<source-file src="src/android/pinpad/newland/modelo/ModeloNewland.java" target-dir="src/ve/com/megasoft/pinpad/newland/modelo" />
+			<!-- Thread -->
+		<source-file src="src/android/pinpad/newland/thread/BaseThread.java"			target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/DownloadAidsThread.java"	target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/DownloadCapksThread.java"	target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/GetBateriaThread.java"		target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/GetFechaThread.java"		target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/GetSerialThread.java"		target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/StartEmvThread.java"		target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/BandaMagneticaThread.java"	target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/GetPinblockThread.java"		target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+		<source-file src="src/android/pinpad/newland/thread/ImpresoraThread.java"		target-dir="src/ve/com/megasoft/pinpad/newland/thread" />
+	</platform>
+</plugin>
