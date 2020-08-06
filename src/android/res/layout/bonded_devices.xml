@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/devices"
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:background="@drawable/corner_rect_blank"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/bt_bottombar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/set_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bluetooth_setting" />
+        
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/set_btn"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/serach_area"
+        android:layout_width="fill_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/search_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/paired_POS" >
+        </TextView>
+           <ImageView
+            android:id="@+id/divider_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/search_label"
+            android:paddingRight="10dp"
+            android:src="@drawable/divider" />
+           
+           <TextView
+            android:id="@+id/no_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:layout_below="@id/divider_img"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:textColor="#ff0000"
+            android:layout_marginTop="20dp"
+            android:text="@string/no_paired">
+        </TextView>
+           
+           
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/bonded_list"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bt_bottombar"
+        android:layout_below="@id/serach_area"
+        android:scrollingCache="false" />
+
+</RelativeLayout>

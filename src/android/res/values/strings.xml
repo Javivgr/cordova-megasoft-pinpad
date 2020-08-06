@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">MobilePOS</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+    <string name="hello">Hello World, MainActivity!</string>
+    
+    <string name="bluetooth_setting">Setting</string>
+    <string name="paired_POS">Paired POS, Please select</string>
+    <string name="no_paired">No paired，Please Press "Setting" to pair!</string>
+    <string name="connecting">Connecting,waiting... </string>
+    <string name="requesting">Requesting,waiting... </string>
+    <string name="send_to">Send Order </string>
+    <string name="send_failure">Send Failure </string>
+    <string name="req_timeout">Request Time out!</string>
+    <string name="recv_timeout">Receive Time out!</string>
+    <string name="cmd_read_error">Read error！</string>
+    <string name="excp_internet">internet error！</string>
+    <string name="excp_unknow_host">unknow host</string>
+    <string name="connect_server_failed">connect server failed</string>
+
+    <string name="tips">Tips</string>
+    <string name="sure">Sure</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="success">success</string>
+    <string name="failure">failure</string>
+
+    <string name="system">System</string>
+    <string name="read_SN">Read SN</string>
+
+    <string name="build_session_key">build session key</string>
+    <string name="tips_build_session_key">key not exit,rebuild it </string>
+
+    <string name="puk_cert_invalid">puk cert invalid</string>
+    <string name="create_seeesion_key_failed">create seeesion key failed</string>
+    <string name="sn_unknow">POS not exist！</string>
+
+    <string name="read_pos_time">Read Pos Time</string>
+    <string name="set_pos_time">Set Pos Time</string>
+    <string name="pos_reboot">Pos Reboot</string>
+    <string name="pos_shutdown">Pos Shutdown</string>
+
+    <string name="pos_beep">Set beep</string>
+    <string name="beep_hz">frequency(HZ):</string>
+    <string name="keep_ms">keep time(ms):</string>
+    <string name="keep_time"> please enter keep time!</string>
+    <string name="pos_LED">Set LED</string>
+    <string name="led_always_dark"> Always Dark</string>
+    <string name="led_always_bright">Always Bright</string>
+    <string name="led_keep_ms">Bright Keep Time</string>
+
+    <string name="read_battery">Read Battery</string>
+    <string name="energy_percent">electric quantity %1$d</string>
+    <string name="only_battery_supply">only battery supply</string>
+    <string name="charging"> is charging</string>
+    <string name="full_charged">full charged</string>
+    <string name="only_power_supply">only power supply</string>
+    <string name="read_soft_verison">Read Soft Verison</string>
+
+
+    <string name="mis">MIS Transaction </string>
+    <string name="terminal_init">terminal init</string>
+    <string name="pos_signin">Sign In</string>
+    <string name="pos_signout">Sign Out</string>
+    <string name="pos_settlement">Settlement</string>
+    <string name="send_terminal_args">Send Terminal Args</string>
+    <string name="download_terminal_args">Download Terminal Args</string>
+    <string name="iccard_puk_download">IC Puk Download</string>
+    <string name="iccard_aid_download">IC Aid Download</string>
+    <string name="responding_test">Responding Test</string>
+    <string name="query_balance">Query Balance</string>
+
+    <string name="consume">Consume</string>
+    <string name="tips_amount">input amount</string>
+    <string name="repeal">Repeal</string>
+    <string name="tips_repeal">please input serial number</string>
+    <string name="tips_flow">serial number</string>
+    <string name="amount">amount(￥):</string>
+
+    <string name="cardId">cardId:</string>
+    <string name="amount_">amount: %1$s ￥</string>
+    <string name="currency">currency:</string>
+    <string name="merchantId">merchantId:</string>
+    <string name="terminalId">terminalId:</string>
+    <string name="batchId">batchId:</string>
+    <string name="serialNo">serialNo:</string>
+    <string name="date">date:</string>
+    <string name="time">time:</string>
+    <string name="authCode">auth code:</string>
+    <string name="sysRefNo">sysRefNo:</string>
+    <string name="oldSerialNo"> old serialNo:</string>
+    <string name="pruebaDeFlag"> pruebaDeFlag:</string>
+    <string name="track2"> track2:</string>
+    <string name="tvr"> tvr:</string>
+
+    <string name="tips_no_recode">no recode！</string>
+
+    <string name="pkt_invalid">pkt invalid</string>
+    <string name="ins_undefined">ins undefined</string>
+    <string name="ins_type_undefined">ins type undefined</string>
+    <string name="ins_code_undefined">ins code undefined</string>
+    <string name="permission_denied">permission denied</string>
+    <string name="session_key_invalid">session key invalid</string>
+    <string name="ins_ver_unsupported">ins ver unsupported</string>
+    <string name="ins_failed">ins failed</string>
+    <string name="communication_failed">communication failed</string>
+    <string name="terminal_not_registration">terminal not registration</string>
+    <string name="terminal_not_init">terminal not init</string>
+    <string name="terminal_repeat_init">terminal repeat init</string>
+    <string name="pkt_data_loss">pkt data loss</string>
+    <string name="pkt_data_invalid">pkt data invalid</string>
+    <string name="sale_cancel">sale cancel</string>
+    <string name="repeat_signin">repeat signin</string>
+    <string name="PED_action_error">PED_action_error</string>
+    <string name="select_channel">select channel</string>
+    <string name="plug_in">please input device！</string>
+    <string name="setting_title">IP/Port Settings</string>
+    <string name="ip_address">IP Address </string>
+    <string name="port">Port：</string>
+    <string name="ip_enter">Please enter IP Address</string>
+    <string name="port_enter">Please enter Port</string>
+    <string name="invalid_ip">invalid IP Address！</string>
+    <string name="invalid_port">invalid IP Port！</string>
+    <string name="setting_success">IP/PORT！</string>
+</resources>

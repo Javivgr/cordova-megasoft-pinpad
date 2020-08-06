@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">MobilePOS</string>
+	<string name="bluetooth_setting">Bluetooth</string>
+    <string name="paired_POS">Dispositivos emparejado, Por favor, seleccione</string>
+    <string name="no_paired">No hay dispositivos, por favor, pulse "Configuración" para emparejar</string>
+    <string name="connecting">Conectando, espere&#8230;</string>
+    <string name="requesting">Ejecutando, espere&#8230;</string>
+    <string name="send_to">Enviar orden </string>
+    <string name="send_failure">Envio fallido </string>
+    <string name="req_timeout">Tiempo de espera de solicitud alcanzado</string>
+    <string name="recv_timeout">Tiempo de espera de respuesta alcanzado</string>
+    <string name="cmd_read_error">Error de lectura</string>
+    <string name="excp_internet">Error de conexión de internet</string>
+    <string name="excp_unknow_host">host deconocido</string>
+    <string name="connect_server_failed">conexión a servidor fallida</string>
+
+    <string name="tips">Consejos</string>
+    <string name="sure">Seguro</string>
+    <string name="cancel">Cancelar</string>
+
+    <string name="success">Éxito</string>
+    <string name="failure">Fracaso</string>
+
+    <string name="system">Sistema</string>
+    <string name="read_SN">Leer Serial</string>
+
+    <string name="build_session_key">Construir llave de sesión</string>
+    <string name="tips_build_session_key">Llave inexistente, Reconstrúyala</string>
+
+    <string name="puk_cert_invalid">Certificado puk invalido</string>
+    <string name="create_seeesion_key_failed">Creación llave de sesión fallida</string>
+    <string name="sn_unknow">POS inexistente！</string>
+
+    <string name="read_pos_time">Tiempo de lectura POS</string>
+    <string name="set_pos_time">Setear Tiempo de lectura POS</string>
+    <string name="pos_reboot">Reiniciar POS</string>
+    <string name="pos_shutdown">Apagar POS</string>
+
+    <string name="pos_beep">Ajustes del Beep</string>
+    <string name="beep_hz">frecuencia(HZ):</string>
+    <string name="keep_ms">duración(ms):</string>
+    <string name="keep_time">por favor ingrese duración</string>
+    <string name="pos_LED">Ajustes de brillo</string>
+    <string name="led_always_dark"> Siempre apagado</string>
+    <string name="led_always_bright">Siempre encendido</string>
+    <string name="led_keep_ms">Duracion brillo de pantalla</string>
+
+    <string name="read_battery">Estado de la bateria</string>
+    <string name="energy_percent">Carga actual %1$d</string>
+    <string name="only_battery_supply">alimentación por bateria</string>
+    <string name="charging"> cargando</string>
+    <string name="full_charged">cargada</string>
+    <string name="only_power_supply">alimentación electrica</string>
+    <string name="read_soft_verison">Version del Software</string>
+
+    <!-- Dialgos de progreso -->
+    <string name="pd_pinpad_data">Recuperando datos del pinpad</string>
+    
+    <!-- Cuadros de dialogo -->
+    <!-- titulos de los cuadros de dialogo -->
+    <string name="titulo_bad_wrong_pinblock">PIN Incorrecto</string>
+    <string name="titulo_select_app">Seleccione una opción</string>
+    <string name="titulo_fallback">Error de Lectura</string>
+    
+    <!-- mensajes de los cuadros de dialogo -->
+    <string name="texto_ambos_lectores">Inserte o deslice Tarjeta&#8230;</string>
+    <string name="texto_lector_banda">Deslice Tarjeta&#8230;</string>
+    <string name="texto_lector_chip">Inserte Tarjeta &#8230;</string>
+    <string name="texto_enter_pinblock">Por favor ingrese PIN&#8230;</string>
+    <string name="texto_re_enter_pinblock">Por favor re-ingrese PIN&#8230;</string>
+    <string name="texto_bad_wrong_pinblock">Tarjeta Bloqueada, contacte a su banco</string>
+    <string name="texto_select_app_cancel_option">Cancelar Transacción</string>
+    <string name="texto_fallback">Presione OK para continuar por banda</string>
+    <string name="texto_procesando">Procesando</string>
+    
+	<!-- Ignorar -->
+    <string name="mis">Transacciones </string>
+    <string name="terminal_init">Inicializacion del terminal</string>
+    <string name="pos_signin">Sign In</string>
+    <string name="pos_signout">Sign Out</string>
+    <string name="pos_settlement">Settlement</string>
+    <string name="send_terminal_args">Send Terminal Args</string>
+    <string name="download_terminal_args">Download Terminal Args</string>
+    <string name="iccard_puk_download">IC Puk Download</string>
+    <string name="iccard_aid_download">IC Aid Download</string>
+    <string name="responding_test">Responding Test</string>
+    <string name="query_balance">Query Balance</string>
+
+    <string name="consume">Consume</string>
+    <string name="tips_amount">input amount</string>
+    <string name="repeal">Repeal</string>
+    <string name="tips_repeal">please input serial number</string>
+    <string name="tips_flow">serial number</string>
+    <string name="amount">amount(Bs.F):</string>
+
+    <string name="cardId">cardId:</string>
+    <string name="amount_">amount: %1$s Bs.F</string>
+    <string name="currency">currency:</string>
+    <string name="merchantId">merchantId:</string>
+    <string name="terminalId">terminalId:</string>
+    <string name="batchId">batchId:</string>
+    <string name="serialNo">serialNo:</string>
+    <string name="date">date:</string>
+    <string name="time">time:</string>
+    <string name="authCode">auth code:</string>
+    <string name="sysRefNo">sysRefNo:</string>
+    <string name="oldSerialNo"> old serialNo:</string>
+    <string name="pruebaDeFlag"> pruebaDeFlag:</string>
+    <string name="track2"> track2:</string>
+    <string name="tvr"> tvr:</string>
+
+    <string name="tips_no_recode">no recode！</string>
+
+    <string name="pkt_invalid">pkt invalid</string>
+    <string name="ins_undefined">ins undefined</string>
+    <string name="ins_type_undefined">ins type undefined</string>
+    <string name="ins_code_undefined">ins code undefined</string>
+    <string name="permission_denied">permission denied</string>
+    <string name="session_key_invalid">session key invalid</string>
+    <string name="ins_ver_unsupported">ins ver unsupported</string>
+    <string name="ins_failed">ins failed</string>
+    <string name="communication_failed">communication failed</string>
+    <string name="terminal_not_registration">terminal not registration</string>
+    <string name="terminal_not_init">terminal not init</string>
+    <string name="terminal_repeat_init">terminal repeat init</string>
+    <string name="pkt_data_loss">pkt data loss</string>
+    <string name="pkt_data_invalid">pkt data invalid</string>
+    <string name="sale_cancel">sale cancel</string>
+    <string name="repeat_signin">repeat signin</string>
+    <string name="PED_action_error">PED_action_error</string>
+    <string name="select_channel">select channel</string>
+    <string name="plug_in">please input device！</string>
+    <string name="setting_title">IP/Port Settings</string>
+    <string name="ip_address">IP Address </string>
+    <string name="port">Port：</string>
+    <string name="ip_enter">Please enter IP Address</string>
+    <string name="port_enter">Please enter Port</string>
+    <string name="invalid_ip">invalid IP Address！</string>
+    <string name="invalid_port">invalid IP Port！</string>
+    <string name="setting_success">IP/PORT！</string>
+</resources>
